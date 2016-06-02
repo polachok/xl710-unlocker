@@ -60,7 +60,7 @@ int main(int argc, const char **argv) {
     eeprom->offset = offset + 0xc*i*2;
     
     /* Remove bit 0800 = qualification from whatever was in register 8 */
-    *(uint16_t*)(eeprom+1) = FILL_ME_IN; // 0x230c = 0x2b0c - 0x8000
+    *(uint16_t*)(eeprom+1) = FILL_ME_IN; // 0x230c = 0x2b0c - 0x800
     
     memset(&ifr, 0, sizeof(ifr));
     strcpy(ifr.ifr_name, ethDev);
